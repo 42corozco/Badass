@@ -21,7 +21,7 @@ le nom, celui que tu as mis dans la image 1
 	cd $HOME/shared
 	sh setup.sh
 ```
-### dehors la vm
+### pour te connecter en ssh a la vm
 ssh -p [port] [utilisateur]@localhost
 ```
 	ssh -p 2222 badass@localhost

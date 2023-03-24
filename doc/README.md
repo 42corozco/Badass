@@ -4,20 +4,20 @@
 ## 1) Vm settings -> Shared Folders
 ![?????](./img/sharedFoldersConfig.png)
 
-## Pour partager le dossier (dans la vm
+## Pour partager le dossier (env: vm)
 ##
 ```
 	mkdir -pv $HOME/shared
 ```
 ##
-le nom, celui que tu as mis dans la image 1
+le nom de celui que tu as mis dans la image 1
 ```
 	sudo mount -t vboxsf [nom dossier host] $HOME/shared
 ```
 
 ## 2) pour te connecter en ssh a la vm
 
-### installer [ifconfig, opeenshh-server, git]
+### installer [ifconfig, opeenshh-server, git] (env: vm)
 ```
 	cd $HOME/shared/doc/
 	sh setup.sh
@@ -26,7 +26,7 @@ le nom, celui que tu as mis dans la image 1
 ### VM settings -> Netword -> Avanced -> Port Forwarding
 ![?????](./img/sshConfigVm.png)
 
-### local
+### (env: local)
 ssh -p [port] [utilisateur]@localhost
 ```
 	ssh -p 2222 badass@localhost

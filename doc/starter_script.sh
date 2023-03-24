@@ -19,6 +19,8 @@ echo \
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo usermod -aG docker $USER
+newgrp docker
 echo -n "installing gns3"
 sudo add-apt-repository ppa:gns3/ppa
 sudo apt update

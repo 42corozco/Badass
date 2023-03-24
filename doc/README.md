@@ -19,7 +19,7 @@ le nom, celui que tu as mis dans la image 1
 
 ## installer [ifconfig, opeenshh-server, git]
 ```
-	cd $HOME/shared
+	cd $HOME/shared/doc/
 	sh setup.sh
 ```
 

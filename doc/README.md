@@ -15,18 +15,18 @@ le nom, celui que tu as mis dans la image 1
 	sudo mount -t vboxsf [nom dossier host] $HOME/shared
 ```
 
-### pour te connecter en ssh a la vm
+## 2) pour te connecter en ssh a la vm
 
-## installer [ifconfig, opeenshh-server, git]
+### installer [ifconfig, opeenshh-server, git]
 ```
 	cd $HOME/shared/doc/
 	sh setup.sh
 ```
 
-## 2) VM settings -> Netword -> Avanced -> Port Forwarding
+### VM settings -> Netword -> Avanced -> Port Forwarding
 ![?????](./img/sshConfigVm.png)
 
-
+### local
 ssh -p [port] [utilisateur]@localhost
 ```
 	ssh -p 2222 badass@localhost

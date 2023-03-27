@@ -1,33 +1,12 @@
-# Patager un dossier host et SSH
+## [Aide pour se connecter en ssh ou partager un dossier hors VM](./tips/)
 
-
-## 1) Vm settings -> Shared Folders
-![?????](./img/sharedFoldersConfig.png)
-
-## Pour partager le dossier (env: vm)
-##
+## script setup envirenement (ubuntu, installations)
 ```
-	mkdir -pv $HOME/shared
-```
-##
-le nom de celui que tu as mis dans la image 1
-```
-	sudo mount -t vboxsf [nom dossier host] $HOME/shared
+starter_script.sh
 ```
 
-## 2) pour te connecter en ssh a la vm
+## script pour supprimer les contenaires et images de docker  
 
-### installer [ifconfig, opeenshh-server, git] (env: vm)
 ```
-	cd $HOME/shared/doc/
-	sh setup.sh
-```
-
-### VM settings -> Netword -> Avanced -> Port Forwarding
-![?????](./img/sshConfigVm.png)
-
-### (env: local)
-ssh -p [port] [utilisateur]@localhost
-```
-	ssh -p 2222 badass@localhost
+docker_clean.sh
 ```

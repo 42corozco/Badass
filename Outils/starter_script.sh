@@ -22,11 +22,10 @@ sudo apt-get update
 sudo chgrp $USER /usr/bin/dumpcap
 sudo chmod 754 /usr/bin/dumpcap
 sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
-
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo usermod -aG docker $USER
-newgrp docker
 echo "installing gns3"
 sudo add-apt-repository ppa:gns3/ppa
 sudo apt update
 sudo apt install gns3-gui gns3-server
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo usermod -aG docker $USER
+newgrp docker

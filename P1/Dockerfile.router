@@ -1,1 +1,3 @@
 FROM frrouting/frr:latest
+RUN echo 'service integrated-vtysh-config' > /etc/frr/vtysh.conf \
+ && sed -i 's/\(bgpd\|ospfd\|isisd\)=no/\1=yes/g' /etc/frr/daemons

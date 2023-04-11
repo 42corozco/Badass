@@ -17,7 +17,8 @@ auto vxlan10
 iface vxlan10 inet static
 	address		12.1.1.1
 	netmask 		255.255.255.0
-	pre-up 		ip link add vxlan10 type vxlan id 10 dstport 4789 local 10.1.1.1 remote 10.1.1.2 dev eth0
+	pre-up 		ip link add vxlan10 type vxlan id 10 dstport 4789 group 231.1.1.1
+	pre-up		bridge fdb append 00:00:00:00:00:00 dev vxlan10 dst 10.1.1.2
 
 auto br0
 iface br0 inet static
@@ -62,3 +63,4 @@ iface br0 inet static
 #auto eth2
 #iface eth2 inet dhcp
 #	hostname steve_router-1
+

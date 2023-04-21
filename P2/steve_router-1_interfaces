@@ -17,22 +17,19 @@ auto vxlan10
 iface vxlan10 inet static
 	address		12.1.1.1
 	netmask 		255.255.255.0
-	pre-up 		ip link add vxlan10 type vxlan id 10 dstport 4789 group 231.1.1.1
-	pre-up		bridge fdb append 00:00:00:00:00:00 dev vxlan10 dst 10.1.1.2
+	pre-up 		/sbin/ip link add vxlan10 type vxlan id 10 group 239.1.1.1 dev eth0 dstport 4789
+#	pre-up		bridge fdb append 00:00:00:00:00:00 dev vxlan10 dst 239.1.1.1 via eth0 permanent
+#	pre-up		bridge fdb append 00:00:00:00:00:00 dev vxlan10 dst 10.1.1.2   vni 10 port 4789
 
 auto br0
 iface br0 inet static
 	address	14.1.1.1
 	netmask	255.255.255.0
-	pre-up	ip link add name br0 type bridge
+	pre-up	/sbin/ip link add name br0 type bridge
 	pre-up	brctl addif br0 eth1
 	pre-up	brctl addif br0 vxlan10
-	
+	#pre-up	brctl addif br0 eth0
 		
-	
-	
-
-
 # DHCP config for eth0
 #auto eth0
 #iface eth0 inet dhcp

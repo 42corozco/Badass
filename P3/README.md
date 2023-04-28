@@ -1,2 +1,0 @@
-# Discovering BGP with EVPN
-

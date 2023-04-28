@@ -8,6 +8,6 @@ gns3 P3.gns3
 3. start auxialiary console
 4. Run the command sh script/router-x.sh #with x being the router number
 5. Do it for every router
-6. Add ip address to the hosts # for example /sbin/ip addr add 20.1.1.1/24 dev eth1 host-1
-					/sbin/ip addr add 20.1.1.2/24 dev eth0 host-3
+6. Add ip address to the hosts # for example /sbin/ip addr add 20.1.1.1/24 dev eth1 (for host-1)
+					/sbin/ip addr add 20.1.1.2/24 dev eth0 (for host-3)
 7. Test ping

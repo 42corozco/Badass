@@ -3,7 +3,7 @@ gns3 P3.gns3
 
 #Run router script
 
-1. Go to the router inco you want to choose
+1. Go to the router icon you want to choose
 2. click right
 3. start auxialiary console
 4. Run the command sh script/router-x.sh #with x being the router number
